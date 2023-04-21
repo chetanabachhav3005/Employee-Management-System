@@ -6,7 +6,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -27,13 +26,13 @@ import lombok.ToString;
 public class Employee {
 	
 	@Id
-	@Column(name="Employee_ID")
+	@Column(unique=true,name="Employee_ID")
 	private int employeeID;
 	
 	
 	@Column(name="Employee_Name")
 	private String employeeName;
 	
-	@Column(name="Date of Birth")
+	@Column(name="Date_of_Birth")
 	private LocalDate dateOfBirth;
 }
