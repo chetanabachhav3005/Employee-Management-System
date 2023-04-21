@@ -23,6 +23,7 @@ class EmployeeServiceImplTest {
 	void testGetEmployeeById() throws EmployeeNotFoundException {
 		Employee e=service.getEmployeeById(101);
 		assertEquals(e.getEmployeeID(),101);
+		assertNotNull(e);
 	}
 
 
