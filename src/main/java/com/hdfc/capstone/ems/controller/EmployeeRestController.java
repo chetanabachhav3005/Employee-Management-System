@@ -19,7 +19,7 @@ public class EmployeeRestController {
 	@Autowired
 	IEmployeeService service;
 	
-	
+	//Get by emp_id
 	@GetMapping("/employee/{employeeID}")
 	public ResponseEntity<Employee> getEmployeeById(@PathVariable("employeeID") int employeeId) throws EmployeeNotFoundException{
 		Employee emp=service.getEmployeeById(employeeId);
