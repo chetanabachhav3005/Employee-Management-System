@@ -1,0 +1,1 @@
+curl -k  https://localhost:8888/api/get/101
