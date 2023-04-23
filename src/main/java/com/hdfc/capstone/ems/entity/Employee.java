@@ -3,9 +3,12 @@ package com.hdfc.capstone.ems.entity;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.hdfc.capstone.ems.config.AesEncryptor;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -34,5 +37,6 @@ public class Employee {
 	private String employeeName;
 	
 	@Column(name="Date_of_Birth")
+	@Convert(converter = AesEncryptor.class)
 	private LocalDate dateOfBirth;
 }
